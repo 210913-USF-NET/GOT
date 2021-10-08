@@ -74,9 +74,9 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  color: #122c34;
+  color: #80003e;
   margin-bottom: 60px;
-  background-color: darkgray;
+  background-color: #ffafcc;
 }
 .footer {
   position: absolute;

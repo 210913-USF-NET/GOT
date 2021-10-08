@@ -74,6 +74,7 @@ namespace WebUI.Controllers
             }
             else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Tully")
             {
+
                 ViewBag.message = Request.Cookies["name"];
                 ViewBag.image = "https://i.ytimg.com/vi/33BpR8rjrp0/maxresdefault.jpg";
             }
