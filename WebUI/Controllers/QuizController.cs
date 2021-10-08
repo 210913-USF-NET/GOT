@@ -28,16 +28,48 @@ namespace WebUI.Controllers
 
                 list.Add(question.Question1);
                 list.Add(question.Question2);
-
+                list.Add(question.Question3);
+                list.Add(question.Question4);
+                list.Add(question.Question5);
+                list.Add(question.Question6);
+                list.Add(question.Question7);
+                list.Add(question.Question8);
+                list.Add(question.Question9);
+                list.Add(question.Question10);
 
                 Quiz(house, list);
 
-                return View();
+                Dictionary<string, int> dict = new Dictionary<string, int>();
+
+                dict.Add("Stark", house.Stark);
+                dict.Add("Targaryen", house.Targaryen);
+                dict.Add("Tully", house.Tully);
+                dict.Add("Bolton", house.Bolton);
+                dict.Add("Lannister", house.Lannister);
+                //you need to sort it first
+
+                CookieOptions op = new CookieOptions();
+                op.Expires = DateTime.Now.AddSeconds(10);
+
+                var sortedDict = from entry in dict orderby entry.Value ascending select entry;
+
+                Response.Cookies.Append("name", dict.ElementAt(4).Key,op);
+
+                return RedirectToAction("Result", "Quiz");
             }
             catch
             {
                 return View();
             }
+        }
+
+        public ActionResult Result()
+        {
+            if (Request.Cookies["name"] != null)
+            {
+                ViewBag.message = Request.Cookies["name"];
+            }
+            return View();
         }
 
         // GET: QuizController/Details/5
@@ -109,6 +141,7 @@ namespace WebUI.Controllers
             }
         }
 
+        [NonAction]
         private void Quiz(House house, List<int> list)
         {
             foreach(int num in list)
