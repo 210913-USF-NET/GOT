@@ -1,6 +1,6 @@
 using System;
 
-namespace GOT.Models
+namespace WebUI.Models
 {
     public class ErrorViewModel
     {
