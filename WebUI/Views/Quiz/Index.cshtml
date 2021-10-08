@@ -13,27 +13,39 @@
     <div class="col-md-4">
         <form asp-action="Index">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <p>Question 1: You see your batchmate asking for help in discord and its 1:05AM. What do you do?</p>
-            <p>
-                <ol>
-                    <li>You've been there. You decide to help them.</li>
-                    <br />
-                    <li>Ask why they are not better at coding.</li>
-                    <br />
-                    <li>Share your screen and give them the answer.</li>
-                    <br />
-                    <li>You help them but you're not Juniper so you don't know whats going on and ultimately both of you wasted 45 minutes and now its almost 2am.</li>
-                    <br />
-                    <li>Report them to HR. Its 1:05AM bro.</li>
-                </ol>
-            </p>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    
+                   <b>Question 1:</b> You see your batchmate asking for help in discord and its 1:05AM. What do you do?
+                    </div>
+                
+
+                <div class="panel-body">
+                    <ol>
+                        <li>You've been there. You decide to help them.</li>
+                        <br />
+                        <li>Ask why they are not better at coding.</li>
+                        <br />
+                        <li>Share your screen and give them the answer.</li>
+                        <br />
+                        <li>You help them but you're not Juniper so you don't know whats going on and ultimately both of you wasted 45 minutes and now its almost 2am.</li>
+                        <br />
+                        <li>Report them to HR. Its 1:05AM bro.</li>
+                    </ol>
+                </div>
+            </div>
+            <br />
             <div class="form-group">
-                <label asp-for="Question1" class="control-label"></label>
+                <label asp-for="Question1" class="control-label"><b>Answer</b></label>
                 <input asp-for="Question1" class="form-control" />
                 <span asp-validation-for="Question1" class="text-danger"></span>
             </div>
+
             <br />
-            <p>Question 2: You have QC hackerrank tomorrow. What do you do?</p>
+            <hr />
+            <br />
+
+            <p><b>Question 2:</b> You have QC hackerrank tomorrow. What do you do?</p>
             <p>
                 <ol>
                     <li>Study.</li>
@@ -47,16 +59,21 @@
                     <li>Get Released.</li>
                 </ol>
             </p>
+            <br />
             <div class="form-group">
-                <label asp-for="Question2" class="control-label"></label>
+                <label asp-for="Question2" class="control-label"><b>Answer</b></label>
                 <input asp-for="Question2" class="form-control" />
                 <span asp-validation-for="Question2" class="text-danger"></span>
             </div>
+
             <br />
-            <p>Question 3: Its been 4 weeks since you've started and haven't been paid yet. Revature mentioned their own debit card?!?! You're starving and the electric bill was due 3 weeks ago. What do you do?</p>
+            <hr />
+            <br />
+
+            <p><b>Question 3:</b> Its been 4 weeks since you've started and haven't been paid yet. Revature mentioned their own debit card?!?! You're starving and the electric bill was due 3 weeks ago. What do you do?</p>
             <p>
                 <ol>
-                    <li>Wait for your paycheck.</li>
+                    <li>Wait for your paycheck.<br></li>
                     <br />
                     <li>Mug your batchmate.</li>
                     <br />
@@ -64,16 +81,21 @@
                     <br />
                     <li>Sell your computer.</li>
                     <br />
-                    <li>Mom please send me money I'm hungry.</li>
+                    <li>Steal your mom's money</li>
                 </ol>
             </p>
+            <br />
             <div class="form-group">
-                <label asp-for="Question3" class="control-label"></label>
+                <label asp-for="Question3" class="control-label"><b>Answer</b></label>
                 <input asp-for="Question3" class="form-control" />
                 <span asp-validation-for="Question3" class="text-danger"></span>
             </div>
+
             <br />
-            <p>Question 4: Juniper complimented your P0 in your 1-1. How do you react?</p>
+            <hr />
+            <br />
+
+            <p><b>Question 4:</b> Juniper complimented your P0 in your 1-1. How do you react?</p>
             <p>
                 <ol>
                     <li>"Thank you I worked very hard".</li>
@@ -87,13 +109,18 @@
                     <li>"I'm about to get released".</li>
                 </ol>
             </p>
+            <br />
             <div class="form-group">
-                <label asp-for="Question4" class="control-label"></label>
+                <label asp-for="Question4" class="control-label"><b>Answer</b></label>
                 <input asp-for="Question4" class="form-control" />
                 <span asp-validation-for="Question4" class="text-danger"></span>
             </div>
+
             <br />
-            <p>Question 5: Its 10:20AM and you haven't logged into zoom call yet. What are you doing?</p>
+            <hr />
+            <br />
+
+            <p><b>Question 5:</b> Its 10:20AM and you haven't logged into zoom call yet. What are you doing?</p>
             <p>
                 <ol>
                     <li>Woke up late.</li>
@@ -107,13 +134,18 @@
                     <li>Didn't wake up late. I just don't care because I'm a menace.</li>
                 </ol>
             </p>
+            <br />
             <div class="form-group">
-                <label asp-for="Question5" class="control-label"></label>
+                <label asp-for="Question5" class="control-label"><b>Answer</b></label>
                 <input asp-for="Question5" class="form-control" />
                 <span asp-validation-for="Question5" class="text-danger"></span>
             </div>
+
             <br />
-            <p>Question 6: qwiudnusn? AIOUDNUIN!!!!! omsdoifm.... ;) </p>
+            <hr />
+            <br />
+
+            <p><b>Question 6:</b> qwiudnusn? AIOUDNUIN!!!!! omsdoifm.... ;) </p>
             <p>
                 <ol>
                     <li>I love coding</li>
@@ -127,13 +159,18 @@
                     <li>automatically released</li>
                 </ol>
             </p>
+            <br />
             <div class="form-group">
-                <label asp-for="Question6" class="control-label"></label>
+                <label asp-for="Question6" class="control-label"><b>Answer</b></label>
                 <input asp-for="Question6" class="form-control" />
                 <span asp-validation-for="Question6" class="text-danger"></span>
             </div>
+
             <br />
-            <p>Question 7: You get to pick one person to be on your team for p2. Who are you choosing?</p>
+            <hr />
+            <br />
+
+            <p><b>Question 7:</b> You get to pick one person to be on your team for p2. Who are you choosing?</p>
             <p>
                 <ol>
                     <li>The one ring.</li>
@@ -147,13 +184,18 @@
                     <li>Master Chief from Halo.</li>
                 </ol>
             </p>
+            <br />
             <div class="form-group">
-                <label asp-for="Question7" class="control-label"></label>
+                <label asp-for="Question7" class="control-label"><b>Answer</b></label>
                 <input asp-for="Question7" class="form-control" />
                 <span asp-validation-for="Question7" class="text-danger"></span>
             </div>
+
             <br />
-            <p>Question 8: Its p2 and your teammate merged and deleted all your code and input theirs. What do you do?</p>
+            <hr />
+            <br />
+
+            <p><b>Question 8:</b> Its p2 and your teammate merged and deleted all your code and input theirs. What do you do?</p>
             <p>
                 <ol>
                     <li>Their right.</li>
@@ -167,13 +209,18 @@
                     <li>Delete the entire project because if I can't share my code then nobody can.</li>
                 </ol>
             </p>
+            <br />
             <div class="form-group">
-                <label asp-for="Question8" class="control-label"></label>
+                <label asp-for="Question8" class="control-label"><b>Answer</b></label>
                 <input asp-for="Question8" class="form-control" />
                 <span asp-validation-for="Question8" class="text-danger"></span>
             </div>
+
             <br />
-            <p>Question 9: Favorite genre of music?</p>
+            <hr />
+            <br />
+
+            <p><b>Question 10:</b> Favorite genre of music?</p>
             <p>
                 <ol>
                     <li>Flowers.</li>
@@ -187,13 +234,18 @@
                     <li>Country music.</li>
                 </ol>
             </p>
+            <br />
             <div class="form-group">
-                <label asp-for="Question9" class="control-label"></label>
+                <label asp-for="Question9" class="control-label"><b>Answer</b></label>
                 <input asp-for="Question9" class="form-control" />
                 <span asp-validation-for="Question9" class="text-danger"></span>
             </div>
+
             <br />
-            <p>Question 10: Ten questions was a lot. Help me decide what question should I have asked.</p>
+            <hr />
+            <br />
+
+            <p><b>Question 10:</b> Ten questions was a lot. Help me decide what question should I have asked.</p>
             <p>
                 <ol>
                     <li>Why were you born so perfect?</li>
@@ -207,8 +259,9 @@
                     <li>Why was this quiz 10 questions long?</li>
                 </ol>
             </p>
+            <br />
             <div class="form-group">
-                <label asp-for="Question10" class="control-label"></label>
+                <label asp-for="Question10" class="control-label"><b>Answer</b></label>
                 <input asp-for="Question10" class="form-control" />
                 <span asp-validation-for="Question10" class="text-danger"></span>
             </div>
@@ -218,6 +271,8 @@
         </form>
     </div>
 </div>
+
+<br />
 
 <div>
     <a asp-action="Index">Back to Home Page</a>
