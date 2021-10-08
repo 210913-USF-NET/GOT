@@ -12,7 +12,6 @@ namespace WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        House house = new House();
 
         private readonly ILogger<HomeController> _logger;
 
@@ -35,33 +34,6 @@ namespace WebUI.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-        [HttpPost]
-        private void Submit (int ans)
-        {
-            switch (ans)
-            {
-                case 1:
-                    house.Tully++;
-                    break;
-
-                case 2:
-                    house.Lannister++;
-                    break;
-
-                case 3:
-                    house.Targaryen++;
-                    break;
-
-                case 4:
-                    house.Stark++;
-                    break;
-
-                case 5:
-                    house.Bolton++;
-                    break;
-            }
         }
     }
 }
