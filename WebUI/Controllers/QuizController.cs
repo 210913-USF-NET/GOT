@@ -48,9 +48,12 @@ namespace WebUI.Controllers
                 dict.Add("Lannister", house.Lannister);
                 //you need to sort it first
 
+                CookieOptions op = new CookieOptions();
+                op.Expires = DateTime.Now.AddSeconds(5);
+
                 var sortedDict = from entry in dict orderby entry.Value descending select entry;
 
-                Response.Cookies.Append("name", dict.ElementAt(0).Key);
+                Response.Cookies.Append("name", sortedDict.ElementAt(0).Key, op);
 
                 return RedirectToAction("Result", "Quiz");
             }
@@ -65,11 +68,13 @@ namespace WebUI.Controllers
             if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Stark")
             {
                 ViewBag.message = Request.Cookies["name"];
+                ViewBag.message1 = "hello im cool swag";
                 ViewBag.image = "https://wallpaperaccess.com/full/1307540.jpg";
             }
             else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Lannister")
             {
                 ViewBag.message = Request.Cookies["name"];
+                ViewBag.message1 = "Golden hair. Gold in pairs.";
                 ViewBag.image = "https://i.ytimg.com/vi/rcgBNyy2Pls/maxresdefault.jpg";
             }
             else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Tully")
@@ -85,6 +90,7 @@ namespace WebUI.Controllers
             else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Bolton")
             {
                 ViewBag.message = Request.Cookies["name"];
+                ViewBag.message1 = "My dogs like humans";
                 ViewBag.image = "https://i.imgur.com/2YaWx0q.jpeg";
             }
 
