@@ -74,6 +74,7 @@ namespace WebUI.Controllers
             else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Lannister")
             {
                 ViewBag.message = Request.Cookies["name"];
+                ViewBag.message1 = "Golden hair. Gold in pairs.";
                 ViewBag.image = "https://i.ytimg.com/vi/rcgBNyy2Pls/maxresdefault.jpg";
             }
             else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Tully")
@@ -91,6 +92,7 @@ namespace WebUI.Controllers
             else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Bolton")
             {
                 ViewBag.message = Request.Cookies["name"];
+                ViewBag.message1 = "My dogs like humans";
                 ViewBag.image = "https://i.imgur.com/2YaWx0q.jpeg";
             }
 
