@@ -1,13 +1,13 @@
 ﻿using System;
 
-public class House
+namespace Models
 {
-	public House()
+	public class House
 	{
-		public string Stark;
-	    public string Lannister;
-		public string Greyjoy;
-		public string Baratheon;
-		public string Targaryen;
+		public string Stark { get; set; }
+	    public string Lannister { get; set; }
+		public string Greyjoy { get; set; }
+		public string Baratheon { get; set; }
+		public string Targaryen { get; set; }
 	}
 }
