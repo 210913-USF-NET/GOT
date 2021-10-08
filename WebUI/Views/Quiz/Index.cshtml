@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Answer the questions below carefully.</h1>
 
 <h4>Question</h4>
 <hr />
@@ -12,16 +12,46 @@
     <div class="col-md-4">
         <form asp-action="Index">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <p>Question 1: You see your batchmate asking for help in discord and its 1:05AM. What do you do?</p>
+            <p>
+                <ol>
+                    <li>You've been there. You decide to help them.</li>
+                    <li>Ask why they are not better at coding.</li>
+                    <li>Share your screen and give them the answer.</li>
+                    <li>You help them but you're not Juniper so you don't know whats going on and ultimately both of you wasted 45 minutes and now its almost 2am.</li>
+                    <li>Report them to HR. Its 1:05AM bro.</li>
+                </ol>
+            </p>
             <div class="form-group">
                 <label asp-for="Question1" class="control-label"></label>
                 <input asp-for="Question1" class="form-control" />
                 <span asp-validation-for="Question1" class="text-danger"></span>
             </div>
+            <p>Question 2: You have QC hackerrank tomorrow. What do you do?</p>
+            <p>
+                <ol>
+                    <li>Study.</li>
+                    <li>I don't study. Natural born coding prodigy.</li>
+                    <li>Beg the scrum master to text you the solutions.</li>
+                    <li>Legitimately work 10-6, eat a nice breakfast and lunch. Go to the gym. Do hackerranks from 9-11. Get a good night's rest. Recieve a red color grade for qc.</li>
+                    <li>Get Released.</li>
+                </ol>
+            </p>
             <div class="form-group">
                 <label asp-for="Question2" class="control-label"></label>
                 <input asp-for="Question2" class="form-control" />
                 <span asp-validation-for="Question2" class="text-danger"></span>
             </div>
+            <p>Question 3: Its been 4 weeks since you've started and haven't been paid yet. Revature mentioned their own debit card?!?! You're starving and the electric bill was due 3 weeks ago. What do you do?</p>
+            <p>
+                <ol>
+                    <li>Wait for your paycheck.</li>
+                    <li>Mug your batchmate.</li>
+                    <li>Get a second job.</li>
+                    <li>Sell your computer.</li>
+                    <li>Mom please send me money I'm hungry.</li>
+                </ol>
+            </p>
             <div class="form-group">
                 <label asp-for="Question3" class="control-label"></label>
                 <input asp-for="Question3" class="form-control" />
