@@ -48,9 +48,12 @@ namespace WebUI.Controllers
                 dict.Add("Lannister", house.Lannister);
                 //you need to sort it first
 
+                CookieOptions op = new CookieOptions();
+                op.Expires = DateTime.Now.AddSeconds(5);
+
                 var sortedDict = from entry in dict orderby entry.Value descending select entry;
 
-                Response.Cookies.Append("name", dict.ElementAt(0).Key);
+                Response.Cookies.Append("name", dict.ElementAt(0).Key, op);
 
                 return RedirectToAction("Result", "Quiz");
             }
