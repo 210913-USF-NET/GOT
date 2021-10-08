@@ -3,8 +3,40 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Game Of Thrones: BatchFeed</h1>
-    <p>Click start to see what house you belong to</p>
-    <a asp-action="Index">START!</a>
-</div>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+
+        <div class="container-fluid">
+            <button class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarExample01"
+                    aria-controls="navbarExample01"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarExample01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="p-5 text-center bg-image"
+         style=" background-image: url('https://images.squarespace-cdn.com/content/v1/55ca0f96e4b0d196f15738b9/1530045336382-NPBAR6N39UR1R0Z431IL/EPPLA78022.gif?format=1000w'); height: 700px; margin-top: 40px; ">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white">
+                    <h1 class="mb-3">Game Of Thrones: BatchFeed</h1>
+                    <h4 class="mb-3">Click start to see what house you belong to</h4>
+                    <a class="btn btn-outline-light btn-lg" role="button" asp-controller="Quiz" asp-action="Index">START!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
