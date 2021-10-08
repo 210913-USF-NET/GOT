@@ -48,12 +48,9 @@ namespace WebUI.Controllers
                 dict.Add("Lannister", house.Lannister);
                 //you need to sort it first
 
-                CookieOptions op = new CookieOptions();
-                op.Expires = DateTime.Now.AddSeconds(10);
+                var sortedDict = from entry in dict orderby entry.Value descending select entry;
 
-                var sortedDict = from entry in dict orderby entry.Value ascending select entry;
-
-                Response.Cookies.Append("name", dict.ElementAt(4).Key,op);
+                Response.Cookies.Append("name", dict.ElementAt(0).Key);
 
                 return RedirectToAction("Result", "Quiz");
             }
@@ -65,10 +62,32 @@ namespace WebUI.Controllers
 
         public ActionResult Result()
         {
-            if (Request.Cookies["name"] != null)
+            if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Stark")
             {
                 ViewBag.message = Request.Cookies["name"];
+                ViewBag.image = "https://wallpaperaccess.com/full/1307540.jpg";
             }
+            else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Lannister")
+            {
+                ViewBag.message = Request.Cookies["name"];
+                ViewBag.image = "https://i.ytimg.com/vi/rcgBNyy2Pls/maxresdefault.jpg";
+            }
+            else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Tully")
+            {
+                ViewBag.message = Request.Cookies["name"];
+                ViewBag.image = "https://i.ytimg.com/vi/33BpR8rjrp0/maxresdefault.jpg";
+            }
+            else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Targaryen")
+            {
+                ViewBag.message = Request.Cookies["name"];
+                ViewBag.image = "https://i.ytimg.com/vi/D6EDrPC3oeA/maxresdefault.jpg";
+            }
+            else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Bolton")
+            {
+                ViewBag.message = Request.Cookies["name"];
+                ViewBag.image = "https://i.imgur.com/2YaWx0q.jpeg";
+            }
+
             return View();
         }
 

@@ -14,9 +14,6 @@ namespace Models
 		public int Tully { get; set; }
 
 		public int Targaryen { get; set; }
-
-		public Dictionary<string,int> Result { get; set; }
-
 		
 	}
 }
