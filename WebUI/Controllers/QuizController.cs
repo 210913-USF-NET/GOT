@@ -68,28 +68,32 @@ namespace WebUI.Controllers
             if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Stark")
             {
                 ViewBag.message = Request.Cookies["name"];
-                ViewBag.message1 = "hello im cool swag";
+                ViewBag.message1 = "You are a Stark because you think you can change the world but you are a nobody";
                 ViewBag.image = "https://wallpaperaccess.com/full/1307540.jpg";
             }
             else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Lannister")
             {
                 ViewBag.message = Request.Cookies["name"];
+                ViewBag.message1 = "Golden hair. Gold in pairs.";
                 ViewBag.image = "https://i.ytimg.com/vi/rcgBNyy2Pls/maxresdefault.jpg";
             }
             else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Tully")
             {
 
                 ViewBag.message = Request.Cookies["name"];
+                ViewBag.message1 = "You are kind, you let people step all over you. You are the first to die in the show";
                 ViewBag.image = "https://i.ytimg.com/vi/33BpR8rjrp0/maxresdefault.jpg";
             }
             else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Targaryen")
             {
                 ViewBag.message = Request.Cookies["name"];
+                ViewBag.message1 = "You are a prodigy you, look like Jeff Bezos";
                 ViewBag.image = "https://i.ytimg.com/vi/D6EDrPC3oeA/maxresdefault.jpg";
             }
             else if (Request.Cookies["name"] != null && Request.Cookies["name"] == "Bolton")
             {
                 ViewBag.message = Request.Cookies["name"];
+                ViewBag.message1 = "My dogs like humans";
                 ViewBag.image = "https://i.imgur.com/2YaWx0q.jpeg";
             }
 
