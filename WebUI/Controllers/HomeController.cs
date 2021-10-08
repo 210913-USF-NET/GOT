@@ -25,6 +25,11 @@ namespace WebUI.Controllers
             return View();
         }
 
+        public IActionResult Index1()
+        {
+            return RedirectToAction("Index", "Quiz");
+        }
+
         public IActionResult Privacy()
         {
             return View();
