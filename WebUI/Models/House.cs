@@ -4,10 +4,10 @@ namespace Models
 {
 	public class House
 	{
-		public string Stark { get; set; }
-	    public string Lannister { get; set; }
-		public string Greyjoy { get; set; }
-		public string Baratheon { get; set; }
-		public string Targaryen { get; set; }
+		public int Stark { get; set; }
+	    public int Lannister { get; set; }
+		public int Bolton { get; set; }
+		public int Tully { get; set; }
+		public int Targaryen { get; set; }
 	}
 }
