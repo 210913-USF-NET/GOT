@@ -1,4 +1,7 @@
-﻿@{
+﻿@model House
+@using(Html.Begin())
+
+{
     ViewData["Title"] = "Home Page";
 }
 
@@ -38,7 +41,48 @@
                     <li>I don't study. Natural born coding prodigy.</li>
                     <li>Beg the scrum master to text you the solutions.</li>
                     <li>Legitimately work 10-6, eat a nice breakfast and lunch. Go to the gym. Do hackerranks from 9-11. Get a good night's rest. Recieve a red color grade for qc.</li>
-                    <li>Get Released</li>
+                    <li>Get Released.</li>
+                </ol>
+            </p>
+            <label for="name" id="name_label">Answer</label>
+            <input type="text" name="name" id="name" placeholder="Please Answer 1-5" class="text-input" required />
+        </div>
+        <input type="submit" name="submit" class="button" id="submit_btn" value="Submit Answer" />
+    </fieldset>
+</form>
+
+<form name="contact3" action="">
+    <fieldset>
+        <div class="input-box">
+            <p>Question 3: Its been 4 weeks since you've started and haven't been paid yet. Revature mentioned their own debit card?!?! You're starving and the electric bill was due 3 weeks ago. What do you do?</p>
+            <p>
+                <ol>
+                    <li>Wait for your paycheck.</li>
+                    <li>Mug your batchmate.</li>
+                    <li>Get a second job.</li>
+                    <li>Sell your computer.</li>
+                    <li>Mom please send me money I'm hungry.</li>
+                </ol>
+            </p>
+            <label for="name" id="name_label">Answer</label>
+            <input type="text" name="name" id="name" placeholder="Please Answer 1-5" class="text-input" required />
+        </div>
+        <input type="submit" name="submit" class="button" id="submit_btn" value="Submit Answer" />
+    </fieldset>
+</form>
+
+
+<form name="contact4" action="">
+    <fieldset>
+        <div class="input-box">
+            <p>Question 4: Its been 4 weeks since you've started and haven't been paid yet. Revature mentioned their own debit card?!?! You're starving and the electric bill was due 3 weeks ago. What do you do?</p>
+            <p>
+                <ol>
+                    <li>Wait for your paycheck.</li>
+                    <li>Mug your batchmate.</li>
+                    <li>Get a second job.</li>
+                    <li>Sell your computer.</li>
+                    <li>Mom please send me money I'm hungry.</li>
                 </ol>
             </p>
             <label for="name" id="name_label">Answer</label>
